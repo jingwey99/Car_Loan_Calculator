@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/txtCarPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Car Price:"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtDownPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCarPrice"
+        android:layout_alignStart="@id/txtCarPrice"
+        android:layout_marginTop="20dp"
+        android:text="Down Payment:"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtLoanPeriod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDownPayment"
+        android:layout_alignStart="@id/txtDownPayment"
+        android:layout_marginTop="20dp"
+        android:text="Loan Period(Year):"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtIntRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtLoanPeriod"
+        android:layout_alignStart="@id/txtLoanPeriod"
+        android:layout_marginTop="20dp"
+        android:text="Interest Rate:"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etCarPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_toEndOf="@id/txtCarPrice"
+        android:layout_alignStart="@id/etLoanPeriod"
+        android:layout_alignBottom="@id/txtCarPrice"/>
+
+    <EditText
+        android:id="@+id/etDownPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_toEndOf="@id/txtDownPayment"
+        android:layout_alignStart="@id/etLoanPeriod"
+        android:layout_alignBottom="@id/txtDownPayment"/>
+
+    <EditText
+        android:id="@+id/etLoanPeriod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_toEndOf="@id/txtLoanPeriod"
+        android:layout_alignBottom="@id/txtLoanPeriod"/>
+
+    <EditText
+        android:id="@+id/etIntRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_alignBottom="@id/txtIntRate"
+        android:layout_alignStart="@id/etLoanPeriod"
+        android:layout_toEndOf="@id/txtIntRate"/>
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:layout_below="@id/etIntRate"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/txtCarLoan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCalculate"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Car Loan:"
+        android:textSize="20sp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/txtInterest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCarLoan"
+        android:layout_alignStart="@id/txtCarLoan"
+        android:layout_marginTop="10dp"
+        android:text="Interest:"
+        android:textSize="20sp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/txtMonthlyRepay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtInterest"
+        android:layout_alignStart="@id/txtInterest"
+        android:layout_marginTop="10dp"
+        android:text="Monthly Repayment:"
+        android:textSize="20sp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/carLoanDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txtCarLoan"
+        android:layout_marginLeft="5dp"
+        android:layout_toEndOf="@id/txtCarLoan"
+
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/interestDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txtInterest"
+        android:layout_marginLeft="5dp"
+        android:layout_toEndOf="@id/txtInterest"
+        android:layout_alignStart="@id/carLoanDisplay"
+
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/monthlyRepayDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txtMonthlyRepay"
+        android:layout_marginLeft="5dp"
+        android:layout_toEndOf="@id/txtMonthlyRepay"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:layout_alignTop="@id/btnCalculate"
+        android:layout_toEndOf="@id/btnCalculate"/>
+
+</RelativeLayout>
